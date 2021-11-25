@@ -13,7 +13,7 @@ default: &default
 
 development:
   <<: *default
-  database: development
+  database: db_dev
   <% if Rails.application.secrets[:database].present? %>
   password: <%= Rails.application.secrets[:database][:password] %>
   <% end %>
